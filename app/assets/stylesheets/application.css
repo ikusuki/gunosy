@@ -14,5 +14,7 @@
  *= require_self
  *= require foundation_and_overrides
  *= require animate.min
+ *= require hover.min
+ *= require flaticon
 
  */

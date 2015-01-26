@@ -17,10 +17,10 @@
   return
 ) ($) ->
   animations = [
-      "fadeInDownBig"
-      "fadeInLeftBig"
-      "fadeInRightBig"
-      "fadeInUpBig"
+      "fadeInDown"
+      "fadeInLeft"
+      "fadeInRight"
+      "fadeInUp"
     ]
   # Wookmark default options
 

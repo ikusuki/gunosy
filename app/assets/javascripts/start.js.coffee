@@ -40,6 +40,13 @@ $ ->
 
   window.fullWookmark()
 
+  $('.cell_article .count_comment').click ->
+    $(this).parents('.cell_article').addClass('hover')
+    return false
+  $('.back .button').click ->
+    $(this).parents('.cell_article').removeClass('hover')
+    return false
+
 
 
 
