@@ -1,4 +1,5 @@
 $ ->
+  $('.logo').addClass('end')
   window.handler = null
   window.$cromos = $('#news')
   window.cromoptions =
