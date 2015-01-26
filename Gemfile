@@ -16,6 +16,7 @@ gem 'high_voltage'
 gem 'puma'
 gem 'foundation-rails'
 gem 'pg'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'sqlite3'
