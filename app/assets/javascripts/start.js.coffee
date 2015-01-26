@@ -1,5 +1,4 @@
 $ ->
-  $('.logo').addClass('end')
   window.handler = null
   window.$cromos = $('#news')
   window.cromoptions =
@@ -39,7 +38,12 @@ $ ->
   #   window.moreCards() if (!window.ajax_cards && ($(window).scrollTop() + $(window).height() > $(document).height() - 100))
   #   true
 
-  window.fullWookmark()
+  setTimeout(->
+    $('.logo').addClass('end')
+    setTimeout(->
+      window.fullWookmark()
+    , 1000)
+  , 500)
 
   $('.cell_article .count_comment').click ->
     $(this).parents('.cell_article').addClass('hover')
