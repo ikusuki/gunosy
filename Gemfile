@@ -15,6 +15,7 @@ gem 'awesome_print'             # Able to use ap for great hashing / array dumps
 gem 'high_voltage'
 gem 'puma'
 gem 'foundation-rails'
+gem 'pg'
 
 group :development, :test do
   gem 'sqlite3'
