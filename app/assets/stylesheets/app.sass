@@ -1,0 +1,56 @@
+#news
+  position: relative
+  display: block
+.cell_article
+  position: absolute
+  border: 1px solid #d0d0d0
+  border-radius: 2px
+  background-color: white
+  width: 298px
+  margin: auto
+  box-shadow: 10px 10px 26px 0px rgba(50, 50, 50, 0.75)
+  transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955)
+  transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955)
+  .article_img
+    width: 298px
+    height: 180px
+    overflow: hidden
+    border-top-left-radius: 2px
+    border-top-right-radius: 2px
+  h2
+    margin: 0
+    padding: 10px
+    font-weight: normal
+    font-size: 20px
+    line-height: 20px
+    height: 75px
+    overflow: hidden
+    a
+      color: #333
+  .article_favicon
+    padding: 5px 10px
+    height: 25px
+    overflow: hidden
+    label
+      display: inline
+      font-size: 11px
+      color: #666
+      line-height: 1
+      margin-left: 5px
+  .description
+    margin: 10px 0
+    padding: 0 10px
+    height: 63px
+    font-size: 14px
+    line-height: 1.5em
+    overflow: hidden
+    text-overflow: ellipsis
+    font-weight: lighter
+  .like_counter
+    padding: 0 10px 5px 10px
+    font-size: 13px
+    font-weight: bold
+    .count_comment, .count_like
+      display: inline-block
+      margin-right: 10px
+      font-weight: lighter
