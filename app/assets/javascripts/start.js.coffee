@@ -1,6 +1,7 @@
 $ ->
   window.handler = null
   window.$cromos = $('#news')
+  window.cards_page = 0
   window.cromoptions =
     offset: 20
     autoResize: true
@@ -8,13 +9,13 @@ $ ->
     containerWidth: 1400
     container: window.$cromos
 
-  # window.checkScrollPosition = () ->
-  #   window.moreCards() if (!window.ajax_cards && ($(window).scrollTop() + $(window).height() > $(document).height() - 100))
-  #   true
+  window.checkScrollPosition = () ->
+    window.moreCards() if (!window.ajax_cards && ($(window).scrollTop() + $(window).height() > $(document).height() - 100))
+    true
 
-  # $(window).scroll ->
-  #   window.checkScrollPosition()
-  #   true
+  $(window).scroll ->
+    window.checkScrollPosition()
+    true
 
   # $(window).resize ->
   #   window.resizing = true
@@ -24,19 +25,32 @@ $ ->
   # true
 
   window.fullWookmark = () ->
-    # $('#spinner').addClass('resizing').show()
     window.handler = $('div.cell_article', window.$cromos)
     window.handler.wookmark(window.cromoptions)
-    # $('#spinner').removeClass('resizing').hide()
   true
 
   window.adjustLoadDelay = () ->
     c = setTimeout('window.ajax_cards = false;  $("#spinner").hide();   window.checkScrollPosition();', 500)
     true
 
-  # window.checkScrollPosition = () ->
-  #   window.moreCards() if (!window.ajax_cards && ($(window).scrollTop() + $(window).height() > $(document).height() - 100))
-  #   true
+  window.checkScrollPosition = () ->
+    window.moreCards() if (!window.ajax_cards && ($(window).scrollTop() + $(window).height() > $(document).height() - 100))
+    true
+
+
+  window.moreCards = ->
+    unless window.ajax_cards || window.cards_page == 2
+      window.ajax_cards = true
+      $('#spinner').show()
+      cards_html = $('#news').html()
+      window.$cromos.append(cards_html)
+      window.handler = $('.cell_article', window.$cromos)
+      window.cards_page++ unless cards_html is ""
+      window.handler.wookmark(window.cromoptions)
+      window.adjustLoadDelay()
+  true
+
+
 
   setTimeout(->
     $('.logo').addClass('end')
