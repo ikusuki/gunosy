@@ -497,7 +497,6 @@
     Wookmark
   )()
   $.fn.wookmark = (options) ->
-
     # Create a wookmark instance if not available
     unless @wookmarkInstance
       @wookmarkInstance = new Wookmark(this, options or {})
@@ -508,7 +507,6 @@
     @wookmarkInstance.layout true
     @show_card_anim = ($card) ->
       randomAnimation = animations[Math.floor(Math.random() * animations.length)]
-      console.log(randomAnimation)
       $card.addClass(randomAnimation).show()
       return true
 

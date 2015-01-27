@@ -44,6 +44,7 @@ $ ->
       $('#spinner').show()
       cards_html = $('#news').html()
       window.$cromos.append(cards_html)
+      window.more_cards = true
       window.handler = $('.cell_article', window.$cromos)
       window.cards_page++ unless cards_html is ""
       window.handler.wookmark(window.cromoptions)
