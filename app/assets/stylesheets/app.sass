@@ -19,6 +19,7 @@ body
 
 .cell_article
   perspective: 1000
+  overflow: hidden
   position: absolute
   border: 1px solid #d0d0d0
   border-radius: 2px
@@ -89,13 +90,31 @@ body
     text-overflow: ellipsis
     font-weight: lighter
   .like_counter
+    background: #ecf0f1
     padding: 0px 10px 5px 10px
     font-size: 13px
     font-weight: bold
+    height: 30px
+    border-top: 1px dotted lightgray
+    .count_comment
+      margin-right: 20px
     .count_comment, .count_like
-      display: inline-block
-      margin-right: 10px
+      display: inline
       font-weight: lighter
+      color: black
+      float: right
+      &:visited
+        color: black
+      &:hover
+        color: #27ae60
+    .number
+      font-family: 'Roboto Condensed', sans-serif
+      display: inline
+      background: black
+      color: white
+      padding-left: 5px
+      padding-right: 5px
+      border: 1px solid white
 
 .back
   h3

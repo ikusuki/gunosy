@@ -67,6 +67,17 @@ $ ->
     $(this).parents('.cell_article').removeClass('hover')
     return false
 
+  $('.count_like').click ->
+    $number = $('.number', $(this))
+    number = $number.text()
+    console.log number
+    $number.addClass('animated rubberBand').text(parseInt(number)+1)
+    setTimeout(->
+      $number.removeClass('animated rubberBand')
+    , 500)
+    return false
+
+
 
 
 
